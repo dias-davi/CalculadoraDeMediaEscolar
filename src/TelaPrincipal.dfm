@@ -1,6 +1,8 @@
 object SituacaoAluno: TSituacaoAluno
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = 'Verificar Aptd'#227'o'
   ClientHeight = 194
   ClientWidth = 297
@@ -10,6 +12,7 @@ object SituacaoAluno: TSituacaoAluno
   Font.Height = -11
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poDesktopCenter
   TextHeight = 13
   object grpNotas: TGroupBox
     Left = 8
