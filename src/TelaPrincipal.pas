@@ -91,13 +91,23 @@ begin
     LMensagemReprovado := #13#10 + 'Reprovado!' + #13#10 + 'Média: ' + FloatToStr(LMedia);
 
   if LMedia >= 7 then
-    Result := LMensagemAprovado
+    begin
+      Result := LMensagemAprovado;
+      lblResultado.Font.Color := clWebDarkgreen;
+    end
 
   else if ((LMedia >= 5) and (LMedia <= 6.9)) then
-    Result := LMensagemRecuperacao
+    begin
+      Result := LMensagemRecuperacao;
+      lblResultado.Font.Color := clWebOrange
+    end
 
   else if LMedia < 5 then
-    Result := LMensagemReprovado
+  begin
+    Result := LMensagemReprovado;
+    lblResultado.Font.Color := clWebDarkRed;
+  end;
+
 
 end;
 

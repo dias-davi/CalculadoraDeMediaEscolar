@@ -84,6 +84,12 @@ object SituacaoAluno: TSituacaoAluno
         Width = 3
         Height = 13
         Alignment = taCenter
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
         Layout = tlCenter
       end
     end
