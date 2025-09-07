@@ -2,7 +2,8 @@ program CalculaMediaEscolar;
 
 uses
   Vcl.Forms,
-  CalCulaMedia in 'CalCulaMedia.pas' {SituacaoAluno};
+  TelaPrincipal in 'src\TelaPrincipal.pas' {SituacaoAluno},
+  uValidadorNota in 'src\uValidadorNota.pas';
 
 {$R *.res}
 

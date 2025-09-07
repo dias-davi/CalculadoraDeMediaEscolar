@@ -3,9 +3,15 @@
 	<Transactions>
     <Transaction>2025/08/12 21:03:50.000.160,=C:\Users\davi_\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2025/08/23 19:15:40.000.724,=C:\Users\davi_\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2025/09/06 22:38:52.707,=C:\Users\davi_\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2025/09/06 22:39:32.616,C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\CalCulaMedia.dfm=C:\Users\davi_\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2025/09/06 22:39:32.616,C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\CalCulaMedia.pas=C:\Users\davi_\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2025/09/06 23:22:50.867,C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\CalculaMediaEscolar.dproj=C:\Users\davi_\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2025/09/06 22:38:52.000.707,=C:\Users\davi_\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/09/06 22:39:32.000.616,C:\Users\davi_\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\CalCulaMedia.dfm</Transaction>
+    <Transaction>2025/09/06 22:39:32.000.616,C:\Users\davi_\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\CalCulaMedia.pas</Transaction>
+    <Transaction>2025/09/06 23:22:50.000.867,C:\Users\davi_\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\CalculaMediaEscolar.dproj</Transaction>
+    <Transaction>2025/09/07 03:07:34.373,C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\CalcularMedia.pas=C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\CalCulaMedia.pas</Transaction>
+    <Transaction>2025/09/07 03:07:34.373,C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\CalcularMedia.dfm=C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\CalCulaMedia.dfm</Transaction>
+    <Transaction>2025/09/07 03:08:37.418,C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\src\TelaPrincipal.pas=C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\CalcularMedia.pas</Transaction>
+    <Transaction>2025/09/07 03:08:37.418,C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\src\TelaPrincipal.dfm=C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\CalcularMedia.dfm</Transaction>
+    <Transaction>2025/09/07 03:09:36.389,=C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\Unit1.pas</Transaction>
+    <Transaction>2025/09/07 03:10:00.291,C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\src\uValidadorNota.pas=C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

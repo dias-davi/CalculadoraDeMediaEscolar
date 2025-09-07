@@ -123,10 +123,11 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="CalCulaMedia.pas">
+        <DCCReference Include="src\TelaPrincipal.pas">
             <Form>SituacaoAluno</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="src\uValidadorNota.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

@@ -1,0 +1,67 @@
+unit uValidadorNota;
+
+interface
+
+uses
+  System.SysUtils;
+
+type
+  TValidadorNota = class
+  public
+    class function VerificarSeEhDigitoValido(Key: Char): Boolean;
+    class function VerificarSeEhVirgulaNaPrimeiraPosicao(const Texto: string; Key: Char): Boolean;
+    class function PermitirApenasUmaVirgula(const Texto: string; Key: Char): Boolean;
+    class function VerificarZeroAEsquerda(const Texto: string; Key: Char): Boolean;
+    class function LimitarCasasDecimais(const Texto: string; Key: Char; CasasDecimais: Integer): Boolean;
+    class function ForaDoIntervalo(const TextoSimulado: string): Boolean;
+  end;
+
+implementation
+
+
+class function TValidadorNota.VerificarSeEhDigitoValido(Key: Char): Boolean;
+begin
+  Result := Key in ['0'..'9', ',', #8];
+end;
+
+class function TValidadorNota.VerificarSeEhVirgulaNaPrimeiraPosicao(const Texto: string; Key: Char): Boolean;
+begin
+  Result := (Key = ',') and (Texto = '');
+end;
+
+class function TValidadorNota.PermitirApenasUmaVirgula(const Texto: string; Key: Char): Boolean;
+begin
+  Result := (Key = ',') and (Pos(',', Texto) > 0);
+end;
+
+class function TValidadorNota.VerificarZeroAEsquerda(const Texto: string; Key: Char): Boolean;
+begin
+  Result := (Length(Texto) = 1) and (Texto[1] = '0') and (Key in ['0'..'9']);
+end;
+
+class function TValidadorNota.LimitarCasasDecimais(const Texto: string; Key: Char; CasasDecimais: Integer): Boolean;
+var
+  PosVirgula: Integer;
+begin
+  PosVirgula := Pos(',', Texto);
+  Result := (PosVirgula > 0) and (Key in ['0'..'9']) and (Length(Texto) - PosVirgula >= 2);
+end;
+
+class function TValidadorNota.ForaDoIntervalo(const TextoSimulado: string): Boolean;
+var
+  Valor: Double;
+begin
+  Result := False;
+  try
+    if (TextoSimulado <> '') and (TextoSimulado[Length(TextoSimulado)] <> ',') then
+    begin
+      Valor := StrToFloat(TextoSimulado);
+      Result := (Valor < 0) or (Valor > 10);
+    end;
+  except
+    Result := True;
+  end;
+end;
+
+end.
+

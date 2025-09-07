@@ -1,0 +1,115 @@
+unit TelaPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls;
+
+type
+  TSituacaoAluno = class(TForm)
+    lbledtNota1: TLabeledEdit;
+    lbledtNota2: TLabeledEdit;
+    lbledtNota3: TLabeledEdit;
+    btnCalcularMedia: TButton;
+    lblResultado: TLabel;
+    grpNotas: TGroupBox;
+    grpResultado: TGroupBox;
+    grpLabelResultado: TGroupBox;
+    function VerificarAprovacao(pNota1: Double;
+                                pNota2: Double;
+                                pNota3: Double): string;
+    procedure btnCalcularMediaClick(Sender: TObject);
+    procedure ValidarEntradaNota(Sender: TObject;
+                                  var Key: Char);
+
+  private
+    function TruncarParaDuasCasas(const pValor: Double): Double;
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  SituacaoAluno: TSituacaoAluno;
+
+implementation
+
+uses
+  uValidadorNota;
+
+{$R *.dfm}
+
+procedure TSituacaoAluno.btnCalcularMediaClick(Sender: TObject);
+var
+  LNota1: Double;
+  LNota2: Double;
+  LNota3: Double;
+  LResultado: string;
+
+begin
+  LNota1:= StrToFloat(lbledtNota1.Text);
+  LNota2:= StrToFloat(lbledtNota2.Text);
+  LNota3:= StrToFloat(lbledtNota3.Text);
+
+  LResultado := VerificarAprovacao(LNota1, LNota2, LNota3);
+
+  lblResultado.Caption := LResultado;
+end;
+
+procedure TSituacaoAluno.ValidarEntradaNota(Sender: TObject; var Key: Char);
+var
+  LTextoAtual, TextoSimulado: string;
+begin
+  LTextoAtual := (Sender as TLabeledEdit).Text;
+
+  if Key <> #8 then
+    TextoSimulado := LTextoAtual + Key
+  else
+    TextoSimulado := Copy(LTextoAtual, 1, Length(LTextoAtual)-1);
+
+  if not TValidadorNota.VerificarSeEhDigitoValido(Key) then
+    Key := #0
+  else if TValidadorNota.VerificarSeEhVirgulaNaPrimeiraPosicao(LTextoAtual, Key) then
+    Key := #0
+  else if TValidadorNota.PermitirApenasUmaVirgula(LTextoAtual, Key) then
+    Key := #0
+  else if TValidadorNota.VerificarZeroAEsquerda(LTextoAtual, Key) then
+    Key := #0
+  else if TValidadorNota.LimitarCasasDecimais(LTextoAtual, Key, 3) then
+    Key := #0
+  else if TValidadorNota.ForaDoIntervalo(TextoSimulado) then
+    Key := #0;
+end;
+function TSituacaoAluno.VerificarAprovacao(pNota1: Double; pNota2: Double; pNota3: Double): string;
+  var
+    LMedia: Double;
+    LMensagemAprovado: string;
+    LMensagemRecuperacao: string;
+    LMensagemReprovado: string;
+
+begin
+  LMedia:= TruncarParaDuasCasas(((pNota1 + pNota2 + pNota3) / 3));
+    LMensagemAprovado := #13#10 + 'Aprovado!' + #13#10 + 'Média: ' + FloatToStr(LMedia);
+    LMensagemRecuperacao := #13#10 + 'Em Recuperação!' + #13#10 + 'Média: ' + FloatToStr(LMedia);
+    LMensagemReprovado := #13#10 + 'Reprovado!' + #13#10 + 'Média: ' + FloatToStr(LMedia);
+
+
+
+  if LMedia >= 7 then
+    Result := LMensagemAprovado
+
+  else if ((LMedia >= 5) and (LMedia <= 6.9)) then
+    Result := LMensagemRecuperacao
+
+  else if LMedia < 5 then
+    Result := LMensagemReprovado
+
+end;
+
+function TSituacaoAluno.TruncarParaDuasCasas(const pValor: Double): Double;
+begin
+  Result := Trunc(pValor * 100) / 100;
+end;
+
+end.
