@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/08/12 21:03:50.000.160,=C:\Users\davi_\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/08/23 19:15:40.000.724,=C:\Users\davi_\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/09/06 22:38:52.707,=C:\Users\davi_\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/09/06 22:39:32.616,C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\CalCulaMedia.dfm=C:\Users\davi_\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2025/09/06 22:39:32.616,C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\CalCulaMedia.pas=C:\Users\davi_\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/09/06 23:22:50.867,C:\Users\davi_\OneDrive\Área de Trabalho\Projetos\AvaliacaoTech4Jobs\CalculadoraDeMediaEscolar\CalculaMediaEscolar.dproj=C:\Users\davi_\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
